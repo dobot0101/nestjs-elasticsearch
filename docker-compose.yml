@@ -1,26 +1,30 @@
 version: '3'
 services:
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.2.1
+    container_name: elasticsearch
+    image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
     environment:
       - discovery.type=single-node
+      # - ES_JAVA_OPTS=-Xms1g -Xmx1g
+      - xpack.security.enabled=false
     ports:
       - 9200:9200
       - 9300:9300
 
   nestjs-app:
+    container_name: nestjs-app
     build:
       context: .
       dockerfile: Dockerfile
-    env_file: .env
     ports:
       - ${NESTJS_APP_PORT}:${NESTJS_APP_PORT}
     volumes:
       - ./src:/app/src
     depends_on:
       - elasticsearch
-    links:
-      - elasticsearch
+    env_file: .env
     environment:
-      - ELASTICSEARCH_HOST=${ELASTICSEARCH_HOST}
-      - ELASTICSEARCH_PORT=${ELASTICSEARCH_PORT}
+      - ELASTIC_HOST=${ELASTIC_HOST}
+      - ELASTIC_PORT=${ELASTIC_PORT}
+      - ELASTIC_USERNAME=${ELASTIC_USERNAME}
+      - ELASTIC_PASSWORD=${ELASTIC_PASSWORD}

@@ -1,25 +1,47 @@
 import { Injectable } from '@nestjs/common';
 import { ElasticsearchService } from '@nestjs/elasticsearch';
-import { CreateProductDto } from './dto/create-product.dto';
-import { Product } from './entities/product.entity';
+import { randomUUID } from 'crypto';
 
 @Injectable()
 export class ProductService {
-  private products: Product[] = [];
-  constructor(private esService: ElasticsearchService) {}
+  private readonly indexName = 'products';
+  constructor(private readonly elasticsearchService: ElasticsearchService) {}
 
-  async create(createProductDto: CreateProductDto) {
-    const product = new Product();
-    product.name = createProductDto.name;
-    product.description = createProductDto.description;
-    this.products.push(product);
+  async indexProduct(name: string, description: string) {
+    await this.elasticsearchService.index({
+      index: this.indexName,
+      id: randomUUID(),
+      body: {
+        name,
+        description,
+      },
+    });
+  }
 
-    await this.esService.index({
-      index: 'products',
-      id: product.id,
-      body: product,
+  async searchProducts(query: string) {
+    const { hits } = await this.elasticsearchService.search({
+      index: this.indexName,
+      body: {
+        query: {
+          multi_match: {
+            query,
+            fields: ['name', 'description'],
+          },
+        },
+      },
     });
 
-    return product;
+    return hits.hits.map((hit: any) => hit._source);
+  }
+
+  async getAllProducts() {
+    const { hits } = await this.elasticsearchService.search({
+      index: this.indexName,
+      query: {
+        match_all: {},
+      },
+    });
+
+    return hits.hits;
   }
 }
