@@ -1,6 +1,6 @@
-import { Injectable } from '@nestjs/common';
-import { ElasticsearchService } from '@nestjs/elasticsearch';
 import { randomUUID } from 'crypto';
+import { Injectable } from 'node_modules/@nestjs/common';
+import { ElasticsearchService } from 'node_modules/@nestjs/elasticsearch';
 
 @Injectable()
 export class ProductService {
@@ -23,6 +23,9 @@ export class ProductService {
       index: this.indexName,
       body: {
         query: {
+          // match: {
+          //   query,
+          // },
           multi_match: {
             query,
             fields: ['name', 'description'],

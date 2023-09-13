@@ -1,6 +1,6 @@
-import { Module } from '@nestjs/common';
+import { Module } from 'node_modules/@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { ElasticsearchModule } from '@nestjs/elasticsearch';
+import { ElasticsearchModule } from 'node_modules/@nestjs/elasticsearch';
 import { ProductController } from './product.controller';
 import { ProductService } from './product.service';
 

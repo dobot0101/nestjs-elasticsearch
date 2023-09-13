@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { Module } from 'node_modules/@nestjs/common';
 import { ProductModule } from './product/product.module';
 import { ConfigModule } from '@nestjs/config';
 @Module({

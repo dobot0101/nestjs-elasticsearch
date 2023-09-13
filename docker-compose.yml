@@ -2,24 +2,41 @@ version: '3'
 services:
   elasticsearch:
     container_name: elasticsearch
-    image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
+    build:
+      context: elasticsearch
+      args:
+        - ELK_VERSION=${ELK_VERSION}
     environment:
-      - discovery.type=single-node
-      # - ES_JAVA_OPTS=-Xms1g -Xmx1g
-      - xpack.security.enabled=false
+      - ES_JAVA_OPTS=-Xmx1G -Xms1G
     ports:
       - 9200:9200
       - 9300:9300
+    volumes:
+      - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+  kibana:
+    container_name: kibana
+    build:
+      context: kibana/
+      args:
+        ELK_VERSION: $ELK_VERSION
+    volumes:
+      - ./kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "5601:5601"
+    # networks:
+    #   - elk
+    depends_on:
+      - elasticsearch
 
   nestjs-app:
     container_name: nestjs-app
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: api
     ports:
       - ${NESTJS_APP_PORT}:${NESTJS_APP_PORT}
     volumes:
-      - ./src:/app/src
+      - ./api/src:/app/src
     depends_on:
       - elasticsearch
     env_file: .env
