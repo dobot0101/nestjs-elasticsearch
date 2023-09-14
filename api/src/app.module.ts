@@ -1,9 +1,7 @@
-import { Module } from 'node_modules/@nestjs/common';
-import { ProductModule } from './product/product.module';
 import { ConfigModule } from '@nestjs/config';
+import { Module } from 'node_modules/@nestjs/common';
+import { SearchModule } from './search/search.module';
 @Module({
-  imports: [ProductModule, ConfigModule.forRoot()],
-  controllers: [],
-  providers: [],
+  imports: [ConfigModule.forRoot(), SearchModule],
 })
 export class AppModule {}

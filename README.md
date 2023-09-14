@@ -10,5 +10,5 @@
 ### 실행 방법
 
 ```
-docker compose up --buold --force-recreate
+docker compose up --build --force-recreate
 ```

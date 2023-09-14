@@ -11,8 +11,15 @@ services:
     ports:
       - 9200:9200
       - 9300:9300
+    # command:
+    #   - sh
+    #   - -c
+    #   - 'elasticsearch-plugin install analysis-nori; /usr/local/bin/docker-entrypoint.sh elasticsearch;'
     volumes:
       - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - ./elasticsearch/config/elasticsearch-plugins.yml:/usr/share/elasticsearch/config/elasticsearch-plugins.yml
+    networks:
+      - elastic
   kibana:
     container_name: kibana
     build:
@@ -23,11 +30,11 @@ services:
       - ./kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml:ro
       - /etc/localtime:/etc/localtime:ro
     ports:
-      - "5601:5601"
-    # networks:
-    #   - elk
+      - '5601:5601'
     depends_on:
       - elasticsearch
+    networks:
+      - elastic
 
   nestjs-app:
     container_name: nestjs-app
@@ -43,3 +50,8 @@ services:
     environment:
       - ELASTIC_HOST=${ELASTIC_HOST}
       - ELASTIC_PORT=${ELASTIC_PORT}
+    networks:
+      - elastic
+networks:
+  elastic:
+    driver: bridge

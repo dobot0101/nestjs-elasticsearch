@@ -1,8 +1,9 @@
-import { Module } from 'node_modules/@nestjs/common';
+import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { ElasticsearchModule } from 'node_modules/@nestjs/elasticsearch';
-import { ProductController } from './product.controller';
-import { ProductService } from './product.service';
+import { ElasticsearchModule } from '@nestjs/elasticsearch';
+import { ElasticsearchInitService } from 'src/search/ElasticsearchInit.service';
+import { SearchService } from './search.service';
+import { SearchController } from './search.controller';
 
 @Module({
   imports: [
@@ -16,7 +17,7 @@ import { ProductService } from './product.service';
       }),
     }),
   ],
-  controllers: [ProductController],
-  providers: [ProductService],
+  providers: [ElasticsearchInitService, SearchService],
+  controllers: [SearchController],
 })
-export class ProductModule {}
+export class SearchModule {}

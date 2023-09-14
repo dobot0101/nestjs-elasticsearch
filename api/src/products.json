@@ -1,0 +1,302 @@
+[
+  {
+    "id": "67fba1fa-03f9-443b-b370-4b46bec65c14",
+    "title": "[선물세트] 치즈 페어링 컬렉션 (쇼핑백 & 선물박스 증정)",
+    "modifier": "치즈를 더욱 빛내주는 아이템",
+    "search_keyword": null
+  },
+  {
+    "id": "eab90980-20fd-4019-854e-5dabbf4cc030",
+    "title": "[선물세트] 티 푸드 컬렉션 (쇼핑백 & 선물박스 증정)",
+    "modifier": "달콤한 휴식을 위한 차와 디저트",
+    "search_keyword": "기프트"
+  },
+  {
+    "id": "bf1b235c-83c8-4025-ac29-3a01a0df1040",
+    "title": "[선물세트] 심플 쿠킹 컬렉션 (쇼핑백 & 선물박스 증정)",
+    "modifier": "요리가 쉬워지는 오일 · 향신료",
+    "search_keyword": "기프트"
+  },
+  {
+    "id": "29c19d8e-8966-48b2-8e8a-02700e6ac3be",
+    "title": "[제철과일] 남아공 자몽 중대과 (5입, 10입, 20입)",
+    "modifier": "촉촉한 과즙이 꽉 찬 싱그러운 자몽",
+    "search_keyword": null
+  },
+  {
+    "id": "61950c8a-f8ed-4d5b-9d6a-cf1b2a40eaa8",
+    "title": "[스타 콤부차] 스트로베리 선샤인 250ml",
+    "modifier": "햇살처럼 싱그러운 딸기 콤부차",
+    "search_keyword": null
+  },
+  {
+    "id": "586f02a9-c438-4b7f-894e-3997845beb13",
+    "title": "[스타 콤부차] 핑크 구아바 250ml",
+    "modifier": "사랑스러운 핑크빛의 구아바 콤부차",
+    "search_keyword": null
+  },
+  {
+    "id": "ffc5848a-d278-4680-8356-9564e49f6ea2",
+    "title": "[스타 콤부차] 러블리 리치 250ml",
+    "modifier": "사랑스러운 풍미의 리치 콤부차",
+    "search_keyword": null
+  },
+  {
+    "id": "42bf942f-37aa-4c57-a044-049a8d543e58",
+    "title": "[스타 콤부차] 피치 파라다이스 250ml",
+    "modifier": "천국의 맛을 선사하는 복숭아 콤부차",
+    "search_keyword": null
+  },
+  {
+    "id": "bc76b4e6-3a7e-4d57-ab11-8a3c0e62348c",
+    "title": "[스타 콤부차] 멜로 망고 250ml",
+    "modifier": "마시는 순간 사랑에 빠지는 망고 콤부차",
+    "search_keyword": null
+  },
+  {
+    "id": "13dcbb9a-e801-4e8d-a8c0-93bc121b6e14",
+    "title": "[스타 콤부차] 블루베리 블리스 250ml",
+    "modifier": "행복이 차오르는 블루베리 콤부차",
+    "search_keyword": null
+  },
+  {
+    "id": "9fe334bb-c715-45ad-a5fb-ae0dc748522b",
+    "title": "[항공직송] 브라질산 팔머 애플망고 2kg",
+    "modifier": "남미 풍미 가득! 달콤하고 쫀득한 애플망고",
+    "search_keyword": null
+  },
+  {
+    "id": "f44658cd-1357-44bd-b636-86a4a2c65fe4",
+    "title": "[비타미주] 비건콜라 제로슈가 250ml",
+    "modifier": "누구나 가벼운 마음으로 즐기는 콜라",
+    "search_keyword": null
+  },
+  {
+    "id": "fff51d92-ed1d-4506-94ab-546d0589d848",
+    "title": "[라메르풀라르] 팔레트 125g",
+    "modifier": "달콤한 프렌치 퓨어버터 쇼트브레드",
+    "search_keyword": null
+  },
+  {
+    "id": "850faef4-ce4b-46b6-9ee4-3b533e91d012",
+    "title": "[라메르풀라르] 사브레 쿠키 125g",
+    "modifier": "버터 풍미를 가득 담은 바삭한 프렌치 쿠키",
+    "search_keyword": null
+  },
+  {
+    "id": "0fab5a29-32da-4c50-8d46-6c9d11a4e925",
+    "title": "[라메르풀라르] 사브레 초코칩 쿠키 125g",
+    "modifier": "다크초콜릿을 콕콕 품은 프렌치 버터 쿠키",
+    "search_keyword": null
+  },
+  {
+    "id": "49d3b19f-4b9b-45b2-ad2f-f6b005bf48a7",
+    "title": "[라메르풀라르] 사브레 카라멜 쿠키 125g",
+    "modifier": "녹진한 캐러멜 풍미의 프렌치 버터 쿠키",
+    "search_keyword": null
+  },
+  {
+    "id": "48ccb693-92aa-4760-945c-d08f00297fb0",
+    "title": "[본마망] 미니 딸기잼 30g x 15개입",
+    "modifier": "앙증맞은 사이즈의 딸기잼",
+    "search_keyword": "딸기쨈 딸기잼 과일잼 과일쨈 프랑스"
+  },
+  {
+    "id": "3a6719e4-dd29-4e51-baf2-50a87f277334",
+    "title": "[본마망] 미니 라즈베리잼 30g X 15개입",
+    "modifier": "앙증맞은 사이즈의 라즈베리잼",
+    "search_keyword": null
+  },
+  {
+    "id": "e9318847-e873-4abc-91b4-5fdec6fdb8dc",
+    "title": "[본마망] 미니 블루베리잼 30g x 15개입",
+    "modifier": "앙증맞은 사이즈의 블루베리잼",
+    "search_keyword": null
+  },
+  {
+    "id": "dc2f0db4-cda9-4d9f-8fe1-ff064bbf6839",
+    "title": "[미니올리바] 엑스트라버진 올리브오일 96ml (8ml X 12개입)",
+    "modifier": "간편한 캡슐형 올리브오일",
+    "search_keyword": null
+  },
+  {
+    "id": "0898fbc3-cfff-4154-998f-d8234e5d9036",
+    "title": "[미니올리바] 화이트트러플 올리브오일 96ml (8ml X 12개)",
+    "modifier": "우아한 트러플 향의 캡슐형 올리브오일",
+    "search_keyword": null
+  },
+  {
+    "id": "a7abd01c-81f9-440f-8009-c39a74a6b122",
+    "title": "[미니올리바] 발사믹 비네그레트 98ml (14ml X 7개)",
+    "modifier": "캡슐로 간편하게 더하는 새콤한 풍미",
+    "search_keyword": null
+  },
+  {
+    "id": "7edd1157-5632-4366-a774-dea9163f1cd4",
+    "title": "[임프레스드] 콜드프레스 오렌지 주스 300ml",
+    "modifier": "신선한 호주산 오렌지가 그대로",
+    "search_keyword": "쥬스 착즙오렌지주스 착즙오렌지쥬스 착즙주스 주스 착즙쥬스 호주"
+  },
+  {
+    "id": "43662930-ad68-4212-8ccc-f4cbdce6fcda",
+    "title": "[임프레스드] 콜드프레스 베리 블리스 300ml",
+    "modifier": "호주산 과일을 낮은 온도에서 천천히 짜낸 주스",
+    "search_keyword": "호주 착즙주스 주스 쥬스 착즙쥬스"
+  },
+  {
+    "id": "6fd0dc89-f85b-4ad9-9108-37a7d670789c",
+    "title": "[임프레스드] 콜드프레스 그린 수프림 300ml",
+    "modifier": "호주산 과일과 채소를 낮은 온도에서 천천히 짜낸 주스",
+    "search_keyword": "호주 주스 쥬스 착즙주스 착즙쥬스"
+  },
+  {
+    "id": "38109ff0-c823-496c-aabd-b24b794939df",
+    "title": "[쿱스] 비건 핫 퍼지 300g",
+    "modifier": "코코넛 크림으로 만든 비건 초콜릿 소스",
+    "search_keyword": null
+  },
+  {
+    "id": "c5d5b92f-0b78-4515-a3ee-ff7b8fed5ac4",
+    "title": "[쿱스] 콜드 브루 모카 핫 퍼지 300g",
+    "modifier": "향긋한 커피 풍미의 초콜릿 소스",
+    "search_keyword": null
+  },
+  {
+    "id": "c4cabb75-c6d6-4e33-b599-38909e9e9e5a",
+    "title": "[쿱스] 페퍼민트 핫 퍼지 284g",
+    "modifier": "민트의 시원함을 입은 달콤한 초콜릿 소스",
+    "search_keyword": null
+  },
+  {
+    "id": "39240b24-7fb9-4ac0-9025-84645caa0762",
+    "title": "[쿱스] 솔티드 카라멜 소스 284g",
+    "modifier": "달콤하고 짭조름한 카라멜 소스",
+    "search_keyword": null
+  },
+  {
+    "id": "68c2e423-d142-4a6a-910f-b2d60170b98b",
+    "title": "[패밀리아] 초코 크런치 무슬리 50g",
+    "modifier": "한 손에 쏙 들어오는 포켓 그래놀라",
+    "search_keyword": "그레놀라 그래놀라 시리얼 그래놀라 뮤즐리 스위스뮤즐리 초코 스위스 초코시리얼 그레눌라 그래눌라"
+  },
+  {
+    "id": "2909ee0d-f166-45ec-93b5-bc6d8f03dd38",
+    "title": "[패밀리아] 베리 크런치 무슬리 50g",
+    "modifier": "한 손에 쏙 들어오는 포켓 그래놀라",
+    "search_keyword": "스위스 스위스뮤즐리 그래놀라 그래놀라 시리얼 그레놀라 그래눌라 그레눌라 딸기 라즈베리 씨리얼 시리얼 뮤즐리"
+  },
+  {
+    "id": "1b0fe027-2605-4f96-9cd1-8cdd51bcd4a7",
+    "title": "[훅스] 유기농 콘후레이크 275g",
+    "modifier": "건강하게 만든 유기농 시리얼",
+    "search_keyword": "씨리얼 콘프레이크 이탈리아 콘푸레이크 시리얼"
+  },
+  {
+    "id": "efab39bd-5e86-4ccd-9ece-2997780d79a4",
+    "title": "[훅스] 유기농 코코아쉘 300g",
+    "modifier": "건강하게 만든 유기농 초코 시리얼",
+    "search_keyword": "시리얼 씨리얼 콘푸레이크 초코 시리얼 콘프레이크 이탈리아"
+  },
+  {
+    "id": "112f0b58-4343-4ad7-a2f5-489913db1867",
+    "title": "[항공직송] 브라질산 팔머 애플망고 4kg",
+    "modifier": "남미 풍미 가득! 달콤하고 쫀득한 애플망고",
+    "search_keyword": "망고 mango MANGO 애플 망고"
+  },
+  {
+    "id": "811efda4-d035-4019-9796-bfc4e8dc4263",
+    "title": "[솔트 오딧세이] 퓨어 씨솔트 그라인더 190g",
+    "modifier": "바로 갈아 쓰는 그리스 메솔롱기 토판 천일염",
+    "search_keyword": null
+  },
+  {
+    "id": "b6b4cc92-f73a-43cb-8f9e-e24f8b58bc30",
+    "title": "[솔트 오딧세이] 스모크드 씨솔트 그라인더 190g",
+    "modifier": "너도밤나무로 140시간 훈제한 그리스 메솔롱기 토판 천일염",
+    "search_keyword": null
+  },
+  {
+    "id": "0eb6006c-17aa-4a6d-a072-4f3a0e5d3fc0",
+    "title": "[솔트 오딧세이] 갈릭 앤 바질 씨솔트 그라인더 180g",
+    "modifier": "마늘과 바질의 향긋함을 더한 그리스 메솔롱기 토판 천일염",
+    "search_keyword": null
+  },
+  {
+    "id": "90996f6f-1282-4b6b-9bc1-0115a5e2f00f",
+    "title": "[솔트 오딧세이] 레몬 앤 튜메릭 씨솔트 그라인더 190g",
+    "modifier": "레몬과 강황을 조화롭게 더한 그리스 메솔롱기 토판 천일염",
+    "search_keyword": null
+  },
+  {
+    "id": "8b6fb8d8-edb0-449a-8a94-e9882e18f389",
+    "title": "[그랜마와일즈] 스트로베리 앤 크림 비에니즈 비스킷 150g",
+    "modifier": "상큼하고 부드러운 영국 비스킷",
+    "search_keyword": null
+  },
+  {
+    "id": "3aebe6bf-8fd6-4942-8cbb-f107d77a99e6",
+    "title": "[그랜마와일즈] 올 버터 카라멜 앤 씨솔트 비스킷 150g",
+    "modifier": "달콤 짭짤한 매력을 풍기는 영국 비스킷",
+    "search_keyword": null
+  },
+  {
+    "id": "9593f77c-406e-4b29-9cfc-1f412d678ea9",
+    "title": "[그랜마와일즈] 클로티드 크림 쇼트브레드 비스킷 200g",
+    "modifier": "고소한 우유 풍미의 영국 비스킷",
+    "search_keyword": null
+  },
+  {
+    "id": "09f40f30-c661-493a-af1a-6e433ac910d0",
+    "title": "[그랜마와일즈] 프룻 앤 레몬 비스킷 200g",
+    "modifier": "기분 좋은 상큼함의 영국 비스킷",
+    "search_keyword": null
+  },
+  {
+    "id": "3bde7b1a-e649-4c85-8049-90720013a0f7",
+    "title": "[데쎄오] 퓨어버터 쇼트브레드 160g",
+    "modifier": "이탈리아 버터를 듬뿍 넣어 진한 풍미",
+    "search_keyword": "데세오 deseo 쿠키 비스킷 이탈리아"
+  },
+  {
+    "id": "9466a18e-9a0e-418c-abca-993a59629519",
+    "title": "[데쎄오] 초콜릿칩 퓨어버터 쇼트브레드 160g",
+    "modifier": "다크 초콜릿을 품은 쇼트브레드",
+    "search_keyword": "쿠키 deseo 데세오 이탈리아 비스킷"
+  },
+  {
+    "id": "6e642aef-65fe-4fbe-b1dd-3828aca7b48e",
+    "title": "[데쎄오] 로즈향 퓨어버터 쇼트브레드 160g",
+    "modifier": "장미의 사랑스러움을 간직한 쇼트브레드",
+    "search_keyword": null
+  },
+  {
+    "id": "35d0e074-7095-4bd9-89b1-251b6af8c39d",
+    "title": "[데쎄오] 잣 & 건포도 & 칠리페퍼 퓨어버터 쇼트브레드 160g",
+    "modifier": "톡톡 튀는 이색적인 조합의 쇼트브레드",
+    "search_keyword": null
+  },
+  {
+    "id": "d536d33c-69a1-4d25-840a-88b6f0671df0",
+    "title": "[밀리켓] 소고기맛 베트남 컵쌀국수 55g",
+    "modifier": "작은 컵에 쏙 담은 베트남의 맛",
+    "search_keyword": "밀리캣"
+  },
+  {
+    "id": "e2e0b109-f46c-449b-8cee-b7abd0725002",
+    "title": "[밀리켓] 닭고기맛 베트남 쌀국수 60g",
+    "modifier": "뜨거운 물만 부어 간편하게 즐기는 쌀국수",
+    "search_keyword": "밀리캣"
+  },
+  {
+    "id": "11916219-77e9-4e43-97da-dbde9556f13b",
+    "title": "[파머조] 팔레오 카카오 그래놀라 300g",
+    "modifier": "통견과와 씨앗이 가득한 호주 그래놀라",
+    "search_keyword": null
+  },
+  {
+    "id": "190104b2-eb76-4989-84ba-3eb595025bbb",
+    "title": "[파머조] 팔레오 시나몬 그래놀라 300g",
+    "modifier": "통견과와 씨앗이 가득한 호주 그래놀라",
+    "search_keyword": null
+  }
+]
