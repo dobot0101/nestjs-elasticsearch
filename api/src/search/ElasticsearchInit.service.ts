@@ -7,25 +7,47 @@ export class ElasticsearchInitService implements OnModuleInit {
   private readonly index = 'products';
   constructor(private readonly elasticsearchService: ElasticsearchService) {}
   async onModuleInit() {
+    const maxRetryCount = 5;
+    let retryCount = 0;
+    while (retryCount < maxRetryCount) {
+      try {
+        const indexExists = await this.checkIndexExists();
+        console.log({ indexExists });
+        if (!indexExists) {
+          await this.createIndex();
+        }
+
+        const documentExists = await this.checkDocumentExists();
+        console.log({ documentExists });
+        if (!documentExists) {
+          await this.createDocuments();
+        }
+
+        return;
+      } catch (error) {
+        console.error('Elasticsearch가 아직 준비되지 않음. 재시도 중...');
+        retryCount++;
+        await new Promise((resolve) => setTimeout(resolve, 10000));
+      }
+    }
+
+    throw new Error(
+      `5번 재시도 하였으나. Elasticsearch가 준비되지 않아 프로그램 종료...`,
+    );
+  }
+
+  private async checkIndexExists() {
     const indexExists = await this.elasticsearchService.indices.exists({
       index: this.index,
     });
+    return indexExists;
+  }
 
-    console.log({ indexExists });
-
-    if (!indexExists) {
-      await this.createIndex();
-    }
-
-    const documentSearchResult = await this.elasticsearchService.search({
+  private async checkDocumentExists() {
+    const res = await this.elasticsearchService.search({
       index: this.index,
     });
-
-    console.log(documentSearchResult);
-
-    if (documentSearchResult.hits.hits.length === 0) {
-      await this.createDocuments();
-    }
+    return res.hits.hits.length > 0;
   }
 
   private async createDocuments() {
