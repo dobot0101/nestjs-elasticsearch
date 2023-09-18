@@ -6,6 +6,7 @@
 
 - Nest.js, elastic search + kibana
 - Nori analysis (elasticsearch plugin)
+- Docker
 
 ### 실행 방법
 
