@@ -11,21 +11,41 @@ export class SearchService {
       index: this.indexName,
       body: {
         query: {
-          // match: {
-          //   query,
-          // },
-          multi_match: {
-            query,
-            fields: ['title', 'modifier', 'search_keyword'],
+          bool: {
+            should: [
+              {
+                multi_match: {
+                  query,
+                  fields: [
+                    'analyzed_title',
+                    'analyzed_modifier',
+                    'analyzed_search_keyword',
+                  ],
+                  minimum_should_match: 2,
+                },
+              },
+              {
+                multi_match: {
+                  query,
+                  fields: [
+                    'title',
+                    'modifier',
+                    'search_keyword',
+                    'title.ngram',
+                    'modifier.ngram',
+                    'search_keyword.ngram',
+                  ],
+                },
+              },
+            ],
           },
         },
       },
     });
 
-    console.log(hits.hits);
 
     return hits.hits.map((hit: any) => ({
-      id: hit._id,
+      documentId: hit._id,
       ...hit._source,
     }));
   }

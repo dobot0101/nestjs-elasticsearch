@@ -7,7 +7,7 @@ export class ElasticsearchInitService implements OnModuleInit {
   private readonly index = 'products';
   constructor(private readonly elasticsearchService: ElasticsearchService) {}
   async onModuleInit() {
-    const maxRetryCount = 5;
+    const maxRetryCount = 10;
     let retryCount = 0;
     while (retryCount < maxRetryCount) {
       try {
@@ -58,12 +58,15 @@ export class ElasticsearchInitService implements OnModuleInit {
 
         while (products.length > 0) {
           const productsChunk = products.splice(0, 10);
-          await Promise.all(
+          const results = await Promise.all(
             productsChunk.map(async (product) => {
               await this.elasticsearchService.index({
                 index: this.index,
-                id: product.id,
                 body: {
+                  productId: product.id,
+                  analyzed_title: product.title,
+                  analyzed_modifier: product.modifier,
+                  analyzed_search_keyword: product.search_keyword,
                   title: product.title,
                   modifier: product.modifier,
                   search_keyword: product.search_keyword,
@@ -84,6 +87,7 @@ export class ElasticsearchInitService implements OnModuleInit {
         index: this.index,
         body: {
           settings: {
+            max_ngram_diff: 3,
             analysis: {
               tokenizer: {
                 nori_tokenizer: {
@@ -92,28 +96,65 @@ export class ElasticsearchInitService implements OnModuleInit {
                   discard_punctuation: false,
                   // "user_dictionary": "userdict_ko.txt"
                 },
+                ngram_tokenizer: {
+                  min_gram: 2,
+                  max_gram: 5,
+                  type: 'ngram',
+                  token_chars: ['letter', 'digit'],
+                },
               },
               analyzer: {
                 nori_analyzer: {
                   type: 'custom',
                   tokenizer: 'nori_tokenizer',
                 },
+                ngram_analyzer: {
+                  type: 'custom',
+                  tokenizer: 'ngram_tokenizer',
+                },
               },
             },
           },
           mappings: {
             properties: {
-              title: {
+              analyzed_title: {
                 type: 'text',
                 analyzer: 'nori_analyzer',
+              },
+              analyzed_modifier: {
+                type: 'text',
+                analyzer: 'nori_analyzer',
+              },
+              analyzed_search_keyword: {
+                type: 'text',
+                analyzer: 'nori_analyzer',
+              },
+              title: {
+                type: 'text',
+                fields: {
+                  ngram: {
+                    type: 'text',
+                    analyzer: 'ngram_analyzer',
+                  },
+                },
               },
               modifier: {
                 type: 'text',
-                analyzer: 'nori_analyzer',
+                fields: {
+                  ngram: {
+                    type: 'text',
+                    analyzer: 'ngram_analyzer',
+                  },
+                },
               },
               search_keyword: {
                 type: 'text',
-                analyzer: 'nori_analyzer',
+                fields: {
+                  ngram: {
+                    type: 'text',
+                    analyzer: 'ngram_analyzer',
+                  },
+                },
               },
             },
           },
@@ -128,6 +169,9 @@ export class ElasticsearchInitService implements OnModuleInit {
 
 type Product = {
   id: string;
+  analyzed_title: string;
+  analyzed_modifier: string;
+  analyzed_search_keyword: string;
   title: string;
   modifier: string;
   search_keyword: string;
